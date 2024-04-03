@@ -1,0 +1,279 @@
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+.site-name {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: white; /* Logo color */
+  padding: 10px;
+  flex: 1;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+nav {
+  font-family: "SF Pro Text";
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  padding: 30px 10px;
+  background-color: #002500;
+}
+
+ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgb(121, 255, 111);
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.6s ease;
+}
+
+.link::before {
+  bottom: 0;
+  left: 0;
+}
+
+.link:hover {
+  color: rgb(121, 255, 111);
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+.logo {
+  transition: 0.35s ease;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+.hamburger-menu:hover {
+  opacity: 0.5;
+}
+
+/*main*/
+main {
+  margin: 2rem;
+}
+
+.buttons {
+  margin: 0 0 2rem 0;
+}
+
+.energy-logo:last-child {
+  margin-right: 0;
+}
+
+.energy-logo:hover:nth-child(1) {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 0 20px rgb(7, 101, 0); /* Green glow effect */
+}
+
+.energy-logo:nth-child(2):hover,
+.energy-logo:nth-child(2):active {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 0 20px blue; /* Blue glow effect */
+}
+
+.energy-logo:nth-child(3):hover,
+.energy-logo:nth-child(3):active {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 0 20px red; /* Red glow effect */
+}
+
+#active-btn:nth-child(1) {
+  border: 5px solid rgb(7, 101, 0);
+  padding: 10px;
+  animation: expand 0.9s forwards;
+  box-shadow: 0 0 20px rgb(7, 101, 0); /* Green glow effect */
+}
+
+#active-btn:nth-child(2) {
+  border: 5px solid blue;
+  padding: 10px;
+  animation: expand 0.9s forwards;
+  box-shadow: 0 0 20px blue; /* Blue glow effect */
+}
+
+#active-btn:nth-child(3) {
+  border: 5px solid red;
+  padding: 10px;
+  animation: expand 0.9s forwards;
+  box-shadow: 0 0 20px red; /* Red glow effect */
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.energy-logo:nth-child(1) {
+  border: 5px solid rgb(7, 101, 0);
+}
+
+.energy-logo:nth-child(1) {
+  border: 5px solid rgb(7, 101, 0);
+}
+
+.energy-logo:nth-child(2) {
+  border: 5px solid blue;
+}
+
+.energy-logo:nth-child(3) {
+  border: 5px solid red;
+}
+
+.energy-logo {
+  width: 80px; /* Adjust the width of the logos */
+  height: 80px; /* Adjust the height of the logos */
+  margin: 0 1rem 0 0; /* Adjust the margin between logos */
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s; /* Add box-shadow to the transition */
+}
+
+.content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem 0;
+  animation: expand 0.9s forwards;
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/*footer*/
+footer {
+  background-color: #002500;
+  padding: 20px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media img {
+  width: 30px; /* Set the width of the icons */
+  margin: 0 10px; /* Add some spacing between the icons */
+}
+
+.content {
+  background-color: rgb(7, 101, 0);
+  padding: 25px;
+}
+
+.dynamic-content p {
+  color: white;
+  font-size: 18px;
+}
+
+.content h2 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+@media all and (min-width: 30rem) {
+  .content img {
+    width: 30%;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+  }
+}
+
+@media all and (min-width: 54rem) {
+  .site-name {
+    font-size: 40px; /* Adjust as needed */
+  }
+
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .link {
+    font-size: 20px;
+  }
+}
